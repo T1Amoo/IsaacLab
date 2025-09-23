@@ -7,7 +7,9 @@ from typing import TYPE_CHECKING
 if TYPE_CHECKING:
     from isaaclab.envs import ManagerBasedRLEnv
 
-
+#todo
+#为每个环境维护一个_episode_sums
+#一段时间内没达到降级
 def lin_vel_cmd_levels(
     env: ManagerBasedRLEnv,
     env_ids: Sequence[int],
@@ -22,14 +24,15 @@ def lin_vel_cmd_levels(
 
     if env.common_step_counter % env.max_episode_length == 0:
         if reward > reward_term.weight * 0.8:
-            delta_command = torch.tensor([-0.1, 0.1], device=env.device)
+            delta_command_x = torch.tensor([-0.1, 0.1], device=env.device)
+            delta_command_y = torch.tensor([-0.02, 0.02], device=env.device)
             ranges.lin_vel_x = torch.clamp(
-                torch.tensor(ranges.lin_vel_x, device=env.device) + delta_command,
+                torch.tensor(ranges.lin_vel_x, device=env.device) + delta_command_x,
                 limit_ranges.lin_vel_x[0],
                 limit_ranges.lin_vel_x[1],
             ).tolist()
             ranges.lin_vel_y = torch.clamp(
-                torch.tensor(ranges.lin_vel_y, device=env.device) + delta_command,
+                torch.tensor(ranges.lin_vel_y, device=env.device) + delta_command_y,
                 limit_ranges.lin_vel_y[0],
                 limit_ranges.lin_vel_y[1],
             ).tolist()
@@ -51,7 +54,7 @@ def ang_vel_cmd_levels(
 
     if env.common_step_counter % env.max_episode_length == 0:
         if reward > reward_term.weight * 0.8:
-            delta_command = torch.tensor([-0.1, 0.1], device=env.device)
+            delta_command = torch.tensor([-0.02, 0.02], device=env.device)
             ranges.ang_vel_z = torch.clamp(
                 torch.tensor(ranges.ang_vel_z, device=env.device) + delta_command,
                 limit_ranges.ang_vel_z[0],

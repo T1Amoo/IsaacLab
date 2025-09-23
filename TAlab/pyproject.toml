@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=61"]               
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "talab"                          
+version = "0.1.0"
+description = "IsaacLab extensions workflow for locomotion of unitree g1 robot"
+requires-python = ">=3.11"
+# 可选：补充元数据，上传/协作更友好
+# readme = "README.md"
+# license = { file = "LICENSE" }
+# authors = [{ name = "Your Name", email = "you@example.com" }]
+
+# 如果有运行依赖，放这里
+# dependencies = [
+#   "torch>=2.2",
+#   "numpy>=1.26",
+# ]
+
+# 可选：分组额外依赖
+# [project.optional-dependencies]
+# dev = ["black", "ruff", "pytest"]
+# docs = ["mkdocs-material", "mkdocstrings[python]"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["talab*"]
+
+# 如果包里包含非 .py 资源（如 .yaml/.urdf/.usd）
+# 推荐：
+[tool.setuptools]
+include-package-data = true
+
+# 并在 MANIFEST.in 或下面这项里声明：
+# [tool.setuptools.package-data]
+# "talab" = ["**/*.yaml", "**/*.usd", "**/*.urdf", "**/*.json"]
+# "talab.assets" = ["**/*"]
+
