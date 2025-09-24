@@ -3,7 +3,7 @@ from isaaclab_rl.rsl_rl import RslRlOnPolicyRunnerCfg, RslRlPpoActorCriticCfg, R
 
 
 @configclass
-class BasePPORunnerCfg(RslRlOnPolicyRunnerCfg):
+class GerneralPPORunnerCfg(RslRlOnPolicyRunnerCfg):
     seed = 42
     device = "cuda:0"
     num_steps_per_env = 24

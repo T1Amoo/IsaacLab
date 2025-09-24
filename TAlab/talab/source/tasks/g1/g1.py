@@ -19,7 +19,7 @@ from isaaclab.utils.assets import ISAAC_NUCLEUS_DIR, ISAACLAB_NUCLEUS_DIR
 from isaaclab.utils.noise import AdditiveUniformNoiseCfg as Unoise
 
 from talab.source.assets.robots.unitree.g1 import UNITREE_G1_29DOF_EXPLICIT as ROBOT_CFG
-from talab.source import mdp
+from talab.source.envs import mdp
 
 PLANE_TERRAINS_CFG = terrain_gen.TerrainGeneratorCfg(
     size=(8.0, 8.0),
@@ -35,8 +35,10 @@ PLANE_TERRAINS_CFG = terrain_gen.TerrainGeneratorCfg(
     use_cache=True,
     cache_dir=f"{__name__}/cache/cobblestone_road",
     sub_terrains={
-        "flat": terrain_gen.MeshPlaneTerrainCfg(proportion=0.7),
-        "undulation": terrain_gen.PerlinTerrainCfg(proportion=0.3),
+        "flat": terrain_gen.MeshPlaneTerrainCfg(proportion=0.8),
+        "undulation": terrain_gen.HfRandomUniformTerrainCfg(
+            proportion=0.2, noise_range=(0.02, 0.10), noise_step=0.02, border_width=0.25
+        ),
     },
 )
 
@@ -423,7 +425,7 @@ class CurriculumCfg:
 
 
 @configclass
-class RobotEnvCfg(ManagerBasedRLEnvCfg):
+class G1EnvCfg(ManagerBasedRLEnvCfg):
     """Configuration for the locomotion velocity-tracking environment."""
 
     # Scene settings
@@ -465,7 +467,7 @@ class RobotEnvCfg(ManagerBasedRLEnvCfg):
 
 
 @configclass
-class RobotPlayEnvCfg(RobotEnvCfg):
+class G1PlayEnvCfg(G1EnvCfg):
     def __post_init__(self):
         super().__post_init__()
         self.scene.num_envs = 32
