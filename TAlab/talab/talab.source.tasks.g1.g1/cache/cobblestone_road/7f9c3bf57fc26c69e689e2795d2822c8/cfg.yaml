@@ -1,8 +1,0 @@
-function: isaaclab.terrains.trimesh.mesh_terrains:flat_terrain
-proportion: 0.8
-size: !!python/tuple
-- 8.0
-- 8.0
-flat_patch_sampling: null
-difficulty: 0.6639580390707507
-seed: null
