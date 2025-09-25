@@ -5,10 +5,19 @@ import isaaclab.sim as sim_utils
 from isaaclab.assets.articulation import ArticulationCfg
 from isaaclab.actuators import ImplicitActuatorCfg
 from talab.source.assets.actuators import unitree_actuators
+from isaaclab.utils import configclass
 
 from talab.source.assets import ASSET_DIR
 
-UNITREE_G1_29DOF_IMPLICIT = ArticulationCfg(
+@configclass
+class UnitreeArticulationCfg(ArticulationCfg):
+    """Configuration for Unitree articulations."""
+
+    joint_sdk_names: list[str] = MISSING
+
+    soft_joint_pos_limit_factor = 0.9
+
+UNITREE_G1_29DOF_IMPLICIT = UnitreeArticulationCfg(
     spawn=sim_utils.UsdFileCfg(
         usd_path=f"{ASSET_DIR}/robots/unitree/g1/g1_29dof_rev_1_0.usd",
         activate_contact_sensors=True,
@@ -100,10 +109,42 @@ UNITREE_G1_29DOF_IMPLICIT = ArticulationCfg(
             armature=0.01,
         ),
     },
+    
+        joint_sdk_names=[
+        "left_hip_pitch_joint",
+        "left_hip_roll_joint",
+        "left_hip_yaw_joint",
+        "left_knee_joint",
+        "left_ankle_pitch_joint",
+        "left_ankle_roll_joint",
+        "right_hip_pitch_joint",
+        "right_hip_roll_joint",
+        "right_hip_yaw_joint",
+        "right_knee_joint",
+        "right_ankle_pitch_joint",
+        "right_ankle_roll_joint",
+        "waist_yaw_joint",
+        "waist_roll_joint",
+        "waist_pitch_joint",
+        "left_shoulder_pitch_joint",
+        "left_shoulder_roll_joint",
+        "left_shoulder_yaw_joint",
+        "left_elbow_joint",
+        "left_wrist_roll_joint",
+        "left_wrist_pitch_joint",
+        "left_wrist_yaw_joint",
+        "right_shoulder_pitch_joint",
+        "right_shoulder_roll_joint",
+        "right_shoulder_yaw_joint",
+        "right_elbow_joint",
+        "right_wrist_roll_joint",
+        "right_wrist_pitch_joint",
+        "right_wrist_yaw_joint",
+    ],
 )
 
 
-UNITREE_G1_29DOF_EXPLICIT = ArticulationCfg(
+UNITREE_G1_29DOF_EXPLICIT = UnitreeArticulationCfg(
     spawn=sim_utils.UsdFileCfg(
         usd_path=f"{ASSET_DIR}/robots/unitree/g1/g1_29dof_rev_1_0.usd",
         activate_contact_sensors=True,
@@ -195,4 +236,36 @@ UNITREE_G1_29DOF_EXPLICIT = ArticulationCfg(
             armature=0.01,
         ),
     },
+    
+        joint_sdk_names=[
+        "left_hip_pitch_joint",
+        "left_hip_roll_joint",
+        "left_hip_yaw_joint",
+        "left_knee_joint",
+        "left_ankle_pitch_joint",
+        "left_ankle_roll_joint",
+        "right_hip_pitch_joint",
+        "right_hip_roll_joint",
+        "right_hip_yaw_joint",
+        "right_knee_joint",
+        "right_ankle_pitch_joint",
+        "right_ankle_roll_joint",
+        "waist_yaw_joint",
+        "waist_roll_joint",
+        "waist_pitch_joint",
+        "left_shoulder_pitch_joint",
+        "left_shoulder_roll_joint",
+        "left_shoulder_yaw_joint",
+        "left_elbow_joint",
+        "left_wrist_roll_joint",
+        "left_wrist_pitch_joint",
+        "left_wrist_yaw_joint",
+        "right_shoulder_pitch_joint",
+        "right_shoulder_roll_joint",
+        "right_shoulder_yaw_joint",
+        "right_elbow_joint",
+        "right_wrist_roll_joint",
+        "right_wrist_pitch_joint",
+        "right_wrist_yaw_joint",
+    ],
 )
