@@ -4,9 +4,9 @@ from dataclasses import MISSING
 import isaaclab.sim as sim_utils
 from isaaclab.assets.articulation import ArticulationCfg
 from isaaclab.actuators import ImplicitActuatorCfg
-from TAlab.source.assets.actuators import unitree_actuators
+from talab.source.assets.actuators import unitree_actuators
 
-from TAlab.source.assets import ASSET_DIR
+from talab.source.assets import ASSET_DIR
 
 UNITREE_G1_29DOF_IMPLICIT = ArticulationCfg(
     spawn=sim_utils.UsdFileCfg(

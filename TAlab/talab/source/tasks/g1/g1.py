@@ -234,7 +234,7 @@ class CommandsCfg:
         rel_standing_envs=0.05,
         rel_heading_envs=1.0,
         heading_command=False,
-        debug_vis=True,
+        debug_vis=False,
         ranges=mdp.UniformLevelVelocityCommandCfg.Ranges(
             lin_vel_x=(-0.1, 0.1), lin_vel_y=(-0.1, 0.1), ang_vel_z=(-0.1, 0.1)
         ),
@@ -271,7 +271,7 @@ class ObservationsCfg:
         # gait_phase = ObsTerm(func=mdp.gait_phase, params={"period": 0.8})
 
         def __post_init__(self):
-            self.history_length = 5
+            self.history_length = 7
             self.enable_corruption = True
             self.concatenate_terms = True
 
@@ -296,7 +296,7 @@ class ObservationsCfg:
         # )
 
         def __post_init__(self):
-            self.history_length = 5
+            self.history_length = 7
             self.enable_corruption = False
             self.concatenate_terms = True
 
