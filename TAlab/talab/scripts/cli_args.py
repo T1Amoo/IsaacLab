@@ -47,7 +47,7 @@ def parse_rsl_rl_cfg(task_name: str, args_cli: argparse.Namespace) -> RslRlOnPol
     from isaaclab_tasks.utils.parse_cfg import load_cfg_from_registry
 
     # load the default configuration
-    rslrl_cfg: RslRlOnPolicyRunnerCfg = load_cfg_from_registry(task_name, "rsl_rl_cfg_entry_point")
+    rslrl_cfg: RslRlOnPolicyRunnerCfg = load_cfg_from_registry(task_name, args_cli.agent)
     if rslrl_cfg.experiment_name == "":
         rslrl_cfg.experiment_name = task_name.lower().replace("-", "_").removesuffix("_play")
     rslrl_cfg = update_rsl_rl_cfg(rslrl_cfg, args_cli)

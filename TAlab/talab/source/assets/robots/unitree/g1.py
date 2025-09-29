@@ -190,7 +190,7 @@ UNITREE_G1_29DOF_EXPLICIT = UnitreeArticulationCfg(
                 ".*_hip_.*": 2.0,
                 "waist_yaw_joint": 5.0,
             },
-            armature=0.01,
+            armature=0.010,
         ),
         "N7520-22.5": unitree_actuators.UnitreeActuatorCfg_N7520_22p5(
             joint_names_expr=[".*_hip_roll_.*", ".*_knee_.*"],
@@ -204,7 +204,7 @@ UNITREE_G1_29DOF_EXPLICIT = UnitreeArticulationCfg(
                 ".*_hip_roll_.*": 2.0,
                 ".*_knee_.*": 4.0,
             },
-            armature=0.01,
+            armature=0.025,
         ),
         "N5020-16": unitree_actuators.UnitreeActuatorCfg_N5020_16(
             joint_names_expr=[
@@ -225,7 +225,7 @@ UNITREE_G1_29DOF_EXPLICIT = UnitreeArticulationCfg(
                 ".*_ankle_.*": 2.0,
                 "waist_.*_joint": 5.0,
             },
-            armature=0.01,
+            armature=0.003,
         ),
         "W4010-25": unitree_actuators.UnitreeActuatorCfg_W4010_25(
             joint_names_expr=[".*_wrist_pitch.*", ".*_wrist_yaw.*"],
@@ -233,7 +233,7 @@ UNITREE_G1_29DOF_EXPLICIT = UnitreeArticulationCfg(
             velocity_limit=22,
             stiffness=40.0,
             damping=1.0,
-            armature=0.01,
+            armature=0.004,
         ),
     },
     
