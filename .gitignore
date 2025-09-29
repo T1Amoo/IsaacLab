@@ -71,4 +71,4 @@ tests/
 .isaac-lab-docker-history
 
 # terrain cache
-/TAlab/talab/talab.source.tasks.g1.g1/
+**/*talab.source.tasks**/
