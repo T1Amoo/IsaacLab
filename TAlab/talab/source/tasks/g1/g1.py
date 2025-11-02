@@ -237,10 +237,10 @@ class CommandsCfg:
         heading_control_stiffness=0.5,
         debug_vis=True,
         ranges=mdp.UniformLevelVelocityCommandCfg.Ranges(
-            lin_vel_x=(-0.5, 2.0), lin_vel_y=(-0.3, 0.3), ang_vel_z=(-0.2, 0.2), heading=(-math.pi, math.pi)
+            lin_vel_x=(-0.5, 2.0), lin_vel_y=(-0.5, 0.5), ang_vel_z=(-1.57, 1.57), heading=(-math.pi, math.pi)
         ),
         limit_ranges=mdp.UniformLevelVelocityCommandCfg.Ranges(
-            lin_vel_x=(-0.5, 2.0), lin_vel_y=(-0.3, 0.3), ang_vel_z=(-0.2, 0.2), heading=(-math.pi, math.pi)
+            lin_vel_x=(-0.5, 2.0), lin_vel_y=(-0.5, 0.5), ang_vel_z=(-1.57, 1.57), heading=(-math.pi, math.pi)
         ),
     )
 
@@ -312,11 +312,11 @@ class RewardsCfg:
     # -- task
     track_lin_vel_xy = RewTerm(
         func=mdp.track_lin_vel_xy_yaw_frame_exp,
-        weight=3.0,
+        weight=1.0,
         params={"command_name": "base_velocity", "std": math.sqrt(0.25)},
     )
     track_ang_vel_z = RewTerm(
-        func=mdp.track_ang_vel_z_exp, weight=1.0, params={"command_name": "base_velocity", "std": math.sqrt(0.25)}
+        func=mdp.track_ang_vel_z_exp, weight=1.0, params={"command_name": "base_velocity", "std": math.sqrt(0.5)}
     )
 
     alive = RewTerm(func=mdp.is_alive, weight=0.15)
@@ -326,13 +326,13 @@ class RewardsCfg:
     base_angular_velocity = RewTerm(func=mdp.ang_vel_xy_l2, weight=-0.05)
     joint_vel = RewTerm(func=mdp.joint_vel_l2, weight=-0.001)
     joint_acc = RewTerm(func=mdp.joint_acc_l2, weight=-2.5e-7)
-    action_rate = RewTerm(func=mdp.action_rate_l2, weight=-0.05)
+    action_rate = RewTerm(func=mdp.action_rate_l2, weight=-0.02)
     dof_pos_limits = RewTerm(func=mdp.joint_pos_limits, weight=-5.0)
-    energy = RewTerm(func=mdp.energy, weight=-2.5e-6)
+    energy = RewTerm(func=mdp.energy, weight=-1e-4)
 
     joint_deviation_hip = RewTerm(
         func=mdp.joint_deviation_l1,
-        weight=-0.12,
+        weight=-0.15,
         params={
             "asset_cfg": SceneEntityCfg(
                 "robot", joint_names=[".*_hip_yaw.*", ".*_hip_roll.*", ".*_shoulder_pitch.*", ".*_elbow.*", ".*waist.*"]
@@ -350,8 +350,14 @@ class RewardsCfg:
     )
     joint_deviation_legs = RewTerm(
         func=mdp.joint_deviation_l1,
-        weight=-0.01,
-        params={"asset_cfg": SceneEntityCfg("robot", joint_names=[".*_hip_pitch.*", ".*_knee.*", ".*_ankle.*"])},
+        weight=-0.06,
+        params={"asset_cfg": SceneEntityCfg("robot", joint_names=[".*_hip_pitch.*", ".*_knee.*"])},
+    )
+    
+    joint_deviation_ankels = RewTerm(
+        func=mdp.joint_deviation_l1,
+        weight=-2.0,
+        params={"asset_cfg": SceneEntityCfg("robot", joint_names=[".*_ankle.*"])},
     )
 
     # -- robot
@@ -361,7 +367,7 @@ class RewardsCfg:
     # -- feet
     gait = RewTerm(
         func=mdp.feet_gait,
-        weight=0.1,
+        weight=0.2,
         params={
             "period": 0.5,
             "offset": [0.0, 0.5],
@@ -380,11 +386,11 @@ class RewardsCfg:
     )
     feet_clearance = RewTerm(
         func=mdp.foot_clearance_reward,
-        weight=1.0,
+        weight=0.5,
         params={
             "std": 0.05,
             "tanh_mult": 2.0,
-            "target_height": 0.1,
+            "target_height": 0.15,
             "asset_cfg": SceneEntityCfg("robot", body_names=".*ankle_roll.*"),
         },
     )
@@ -405,8 +411,8 @@ class TerminationsCfg:
     """Termination terms for the MDP."""
 
     time_out = DoneTerm(func=mdp.time_out, time_out=True)
-    base_height = DoneTerm(func=mdp.root_height_below_minimum, params={"minimum_height": 0.2})
-    bad_orientation = DoneTerm(func=mdp.bad_orientation, params={"limit_angle": 0.3})
+    base_height = DoneTerm(func=mdp.root_height_below_minimum, params={"minimum_height": 0.25})
+    bad_orientation = DoneTerm(func=mdp.bad_orientation, params={"limit_angle": 0.7})
 
 
 @configclass
