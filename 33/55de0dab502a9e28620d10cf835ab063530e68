@@ -1,0 +1,38 @@
+source/isaaclab_tasks/isaaclab_tasks/contrib/reach/config/onerobotics_a1/unimanual/joint_pos_env_cfg.py
+  s_ac3280d582c80f::t_33b6268881f71e 1-74
+source/isaaclab_assets/isaaclab_assets/robots/__init__.pyi
+  s_ac3280d582c80f::t_97cc9e8dd0489b 37,95
+source/isaaclab_tasks/isaaclab_tasks/contrib/reach/config/onerobotics_a1/__init__.py
+  s_ac3280d582c80f::t_ffb683882ffd0c 6
+source/isaaclab_assets/test/test_onerobotics_a1.py
+  s_ac3280d582c80f::t_83d5ecaca3d2ca 6,16,23,25,27,29-30,33-41,46-48,56-58,62,71-73,82,86-87,90-92,116-117,122-125,127-130,139-140,144-167
+  s_ac3280d582c80f::t_c7173b67f8f98e 65
+source/isaaclab_tasks/isaaclab_tasks/contrib/reach/config/onerobotics_a1/mdp/fk_pose_command_cfg.py
+  s_ac3280d582c80f::t_28a2fce8b7c4c9 26-36,38
+source/isaaclab_assets/isaaclab_assets/__init__.pyi
+  s_ac3280d582c80f::t_97cc9e8dd0489b 37,104
+source/isaaclab_tasks/test/contrib/test_onerobotics_a1_reach.py
+  s_ac3280d582c80f::t_083cc670bb51ea 247,249
+  s_ac3280d582c80f::t_3e687ccb388078 36,38,40,42-46,86-88,119,121-122,141-156,248,250-251
+source/isaaclab_assets/isaaclab_assets/robots/onerobotics.py
+  s_ac3280d582c80f::t_56640abd198f4f 6,8,10-19,29,32,56-98,103-104,117-121,133,137-139
+  s_ac3280d582c80f::t_c7173b67f8f98e 20-23,45-55
+source/isaaclab_tasks/isaaclab_tasks/contrib/reach/config/onerobotics_a1/unimanual/__init__.py
+  s_ac3280d582c80f::t_92b2472f740c79 1-21
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.24",
+  "base_commit_sha": "3355de0dab502a9e28620d10cf835ab063530e68",
+  "prompts": {},
+  "sessions": {
+    "s_ac3280d582c80f": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a03bfe-80a8-78f1-bb46-f14a6cff35f6",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "T1Amoo <143424251+T1Amoo@users.noreply.github.com>"
+    }
+  }
+}
