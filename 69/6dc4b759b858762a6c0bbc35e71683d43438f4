@@ -1,0 +1,27 @@
+source/isaaclab_assets/test/test_onerobotics_a1.py
+  s_ac3280d582c80f::t_4808b7f50112c0 149-150
+  s_ac3280d582c80f::t_2e80741d077cff 156,164
+  s_ac3280d582c80f::t_3d005089860356 65
+source/isaaclab_assets/isaaclab_assets/robots/onerobotics.py
+  s_ac3280d582c80f::t_3d005089860356 24
+  s_ac3280d582c80f::t_2e80741d077cff 65-68,81-82,91-92
+  s_ac3280d582c80f::t_4808b7f50112c0 20-22,77
+source/isaaclab_tasks/test/contrib/test_onerobotics_a1_reach.py
+  s_ac3280d582c80f::t_2e80741d077cff 42
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.24",
+  "base_commit_sha": "696dc4b759b858762a6c0bbc35e71683d43438f4",
+  "prompts": {},
+  "sessions": {
+    "s_ac3280d582c80f": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a03bfe-80a8-78f1-bb46-f14a6cff35f6",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "T1Amoo <143424251+T1Amoo@users.noreply.github.com>"
+    }
+  }
+}
