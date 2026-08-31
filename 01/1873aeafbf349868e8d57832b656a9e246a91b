@@ -1,0 +1,19 @@
+source/isaaclab_assets/isaaclab_assets/robots/onerobotics.py
+  s_aa6dbb7ac83cd5::t_fbc4166a0ba53b 35
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.0",
+  "base_commit_sha": "011873aeafbf349868e8d57832b656a9e246a91b",
+  "prompts": {},
+  "sessions": {
+    "s_aa6dbb7ac83cd5": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a04806-3232-7221-8d77-6491e7d2b6a1",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "T1Amoo <143424251+T1Amoo@users.noreply.github.com>"
+    }
+  }
+}
