@@ -1,0 +1,29 @@
+source/isaaclab_tasks/test/contrib/test_onerobotics_a1_reach.py
+  s_5991c8d49db602::t_c55c970441712c 16
+source/isaaclab_tasks/test/contrib/test_onerobotics_a1_bimanual_reach.py
+  s_aa6dbb7ac83cd5::t_a4bcf2d880bf36 16
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.0",
+  "base_commit_sha": "036122074344b14d48a76a446bcba0a0d983c1d9",
+  "prompts": {},
+  "sessions": {
+    "s_5991c8d49db602": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0558c-6d85-7e61-9a1b-743e3b2b0069",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "T1Amoo <143424251+T1Amoo@users.noreply.github.com>"
+    },
+    "s_aa6dbb7ac83cd5": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a04806-3232-7221-8d77-6491e7d2b6a1",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "T1Amoo <143424251+T1Amoo@users.noreply.github.com>"
+    }
+  }
+}

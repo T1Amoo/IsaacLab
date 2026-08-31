@@ -1,0 +1,70 @@
+source/isaaclab_tasks/isaaclab_tasks/contrib/reach/config/onerobotics_a1/agents/__init__.py
+  s_ac3280d582c80f::t_11705d527e8ba9 1-4
+source/isaaclab_tasks/isaaclab_tasks/contrib/reach/config/onerobotics_a1/mdp/__init__.py
+  s_ac3280d582c80f::t_11705d527e8ba9 1-8
+source/isaaclab_tasks/test/contrib/test_onerobotics_a1_reach.py
+  s_ac3280d582c80f::t_9dfc1af31e2cca 21,44-52,163-165,169-175,185-186,188-189
+  s_ac3280d582c80f::t_c39c26dff177e5 136-137
+  s_ac3280d582c80f::t_18130058bddbec 1-7,14-20,22-24,26-31,53-60,62-74,76-91,93-114,210-213,215-219,221-226
+  s_ac3280d582c80f::t_01af170742e1e3 8-13,25,32,42-43,61,75,115-119,126-135,194-206
+  s_ac3280d582c80f::t_8bf92fdd9d0aa8 162
+  s_ac3280d582c80f::t_0ef46475d9fa98 152-161,166-168,176-183
+  s_ac3280d582c80f::t_3d449409d17701 33-41,120-125,138-151,184,187,190-193,207-209,214,220
+  s_ac3280d582c80f::t_6f82468e8578ec 92
+source/isaaclab_tasks/isaaclab_tasks/contrib/reach/config/onerobotics_a1/mdp/fk_pose_command_cfg.py
+  s_ac3280d582c80f::t_01af170742e1e3 43
+  s_ac3280d582c80f::t_51738c1668a40e 20
+  s_ac3280d582c80f::t_11705d527e8ba9 1-19,21-42,44-49
+source/isaaclab_assets/changelog.d/contrib-onerobotics-a1-reach.minor.rst
+  s_ac3280d582c80f::t_11705d527e8ba9 1-4
+source/isaaclab_tasks/isaaclab_tasks/contrib/reach/config/onerobotics_a1/joint_pos_env_cfg.py
+  s_ac3280d582c80f::t_11705d527e8ba9 1-26,28-32,35-69
+  s_ac3280d582c80f::t_01af170742e1e3 27,33-34
+source/isaaclab_assets/test/test_onerobotics_a1.py
+  s_ac3280d582c80f::t_18130058bddbec 1-129,132-140
+  s_ac3280d582c80f::t_68d65b55c1854a 130-131
+CONTRIBUTORS.md
+  s_ac3280d582c80f::t_e4ef79ed676972 197
+source/isaaclab_tasks/isaaclab_tasks/contrib/reach/config/onerobotics_a1/__init__.py
+  s_ac3280d582c80f::t_11705d527e8ba9 1-21
+source/isaaclab_assets/isaaclab_assets/robots/__init__.pyi
+  s_ac3280d582c80f::t_01af170742e1e3 36,94
+source/isaaclab_assets/isaaclab_assets/robots/onerobotics.py
+  s_ac3280d582c80f::t_1d949d4bbc0c3e 53,57
+  s_ac3280d582c80f::t_11705d527e8ba9 1-13,19-45,52,54-56,58-96
+  s_ac3280d582c80f::t_01af170742e1e3 14-15
+  s_ac3280d582c80f::t_5469a6e1ebc71c 16-18
+  s_ac3280d582c80f::t_68d65b55c1854a 46-51
+  s_ac3280d582c80f::t_de2d0c381f2f33 97-98
+docs/source/_static/css/environment-browser.js
+  s_ac3280d582c80f::t_7fcee534ac750e 107
+source/isaaclab_tasks/isaaclab_tasks/contrib/reach/config/onerobotics_a1/mdp/__init__.pyi
+  s_ac3280d582c80f::t_11705d527e8ba9 1-8
+source/isaaclab_tasks/isaaclab_tasks/contrib/reach/config/onerobotics_a1/agents/rsl_rl_ppo_cfg.py
+  s_ac3280d582c80f::t_dc7e664b9f2d90 22
+  s_ac3280d582c80f::t_11705d527e8ba9 1-21,23-47
+source/isaaclab_tasks/changelog.d/contrib-onerobotics-a1-reach.minor.rst
+  s_ac3280d582c80f::t_11705d527e8ba9 1-4
+source/isaaclab_tasks/isaaclab_tasks/contrib/reach/config/onerobotics_a1/mdp/fk_pose_command.py
+  s_ac3280d582c80f::t_01af170742e1e3 17
+  s_ac3280d582c80f::t_5a50e6b4030e3f 30-32,52,55,60-65,67-72,81-83
+  s_ac3280d582c80f::t_11705d527e8ba9 1-16,18-29,33-51,53-54,56-59,66,73-80,84-89
+source/isaaclab_assets/isaaclab_assets/__init__.pyi
+  s_ac3280d582c80f::t_01af170742e1e3 36,102
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.24",
+  "base_commit_sha": "df3988450f45ad9f5ff2c4e17d97cb7ec2666fbb",
+  "prompts": {},
+  "sessions": {
+    "s_ac3280d582c80f": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a03bfe-80a8-78f1-bb46-f14a6cff35f6",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "T1Amoo <143424251+T1Amoo@users.noreply.github.com>"
+    }
+  }
+}
