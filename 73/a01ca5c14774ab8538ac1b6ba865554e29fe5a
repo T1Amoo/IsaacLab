@@ -1,0 +1,38 @@
+source/isaaclab_assets/test/test_onerobotics_a1.py
+  s_ef7452d333de59::t_cba5c4bfb22162 177
+  s_ef7452d333de59::t_5d2d90848477ea 159-176,178-185
+  s_ef7452d333de59::t_9be9a2865842d0 120,127
+  s_ef7452d333de59::t_fbac683b6c55aa 150-158
+source/isaaclab/changelog.d/uniquemelody-git-asset-revision.rst
+  s_ef7452d333de59::t_800a5da79a943a 1-4
+source/isaaclab/isaaclab/utils/assets.py
+  s_ef7452d333de59::t_bcee39e4edac5a 247,251-255,270-272,280-281,283-289,291,296,303-305,312,329,333-337,346-351,357,363,371-374
+source/isaaclab_tasks/isaaclab_tasks/contrib/reach/config/onerobotics_a1/mdp/fk_pose_command.py
+  s_ef7452d333de59::t_9be9a2865842d0 73-74,77
+  s_ef7452d333de59::t_e31c84ef2a0676 75-76
+source/isaaclab_assets/isaaclab_assets/robots/onerobotics.py
+  s_ef7452d333de59::t_c1ebc99ef65b7b 14-16,26-29,39-40,43,52-54,56-60,64-70,73-79
+  s_ef7452d333de59::t_9252cc5a4277df 80-83,131,188
+source/isaaclab_tasks/isaaclab_tasks/contrib/reach/config/onerobotics_a1/mdp/fk_pose_command_cfg.py
+  s_ef7452d333de59::t_9be9a2865842d0 21-23,25-26,33-35,38-39,143-146,150,155
+  s_ef7452d333de59::t_e31c84ef2a0676 24,36-37,147-149,156-157
+  s_ef7452d333de59::t_7fe0e91339d529 158
+source/isaaclab/test/utils/test_assets.py
+  s_ef7452d333de59::t_fbac683b6c55aa 394-440
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "73a01ca5c14774ab8538ac1b6ba865554e29fe5a",
+  "prompts": {},
+  "sessions": {
+    "s_ef7452d333de59": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0230d-de1f-7711-9332-d9e46b69924b",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "uniquemelody <200471066+uniquemelody@users.noreply.github.com>"
+    }
+  }
+}
